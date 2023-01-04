@@ -387,3 +387,7 @@ git push origin --delete master
 ```bash
 git push --force origin master
 ```
+
+```bash
+git config --global http.sslVerify false
+```
