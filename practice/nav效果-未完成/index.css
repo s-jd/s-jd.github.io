@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+html {
+  --bgColorMenu : #1d1d27;
+}
+
+body {
+  background-color: #faedcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  /* width: 11em; */
+  padding: 0 .5em;
+  font-size: 4em;
+  /* height: 1.2em;
+  line-height: 1; */
+  background-color: var(--bgColorMenu);
+  color: #e9edc9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 字体图标 */
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  margin: 0 .25em;
+  fill: #f3f3f3;
+  overflow: hidden;
+  pointer-events: none;
+}
+.menu_item {
+  position: relative;
+}
+
+.menu_item:hover {
+  cursor: pointer;
+}
+
+.active {
+  transform: translate3d(0, -.4em , 0);
+}
+
+.menu_item::before {
+  content: '';
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: aqua;
+  z-index: -1;
+  transform: scale(0);
+}
+.menu_item.active::before {
+  transform: scale(1);
+}
+
+.menu__border{
+  width: 2.5em;
+  height: 0.6em;
+  background-color: var(--bgColorMenu);
+  /* background-color: rgb(87, 124, 124); */
+  position: absolute;
+  left: 0;
+  clip-path: url(#menu);
+  top: -.59em;
+  /* left: 0;
+  bottom: 99%;
+  width: 10.9em;
+  height: 2.4em;
+  position: absolute;
+  clip-path: url(#menu);
+  will-change: transform;
+  background-color: var(--bgColorMenu); */
+  transition: transform var(--timeOut , var(--duration));
+  /* transform: translateX(2.25em); */
+  /* trans; */
+  z-index: -1;
+}
+
+.svg-container {
+  widows: 0;
+  height: 0;
+}
+
